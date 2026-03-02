@@ -1,0 +1,144 @@
+{
+  "brand_identity": {
+    "name": "RapidFix",
+    "ethos": "Industrial Editorial meets Tropical Warmth",
+    "core_values": ["Trust", "Speed", "Local Expertise", "Industrial Precision"],
+    "persona": "The reliable, high-tech Puerto Rican neighbor who fixes it right the first time.",
+    "language_strategy": "Spanish-First (ES/EN toggle required). Copy should be warm but professional."
+  },
+  "typography": {
+    "fonts": {
+      "display": {
+        "family": "Bebas Neue",
+        "fallback": "sans-serif",
+        "usage": "Main Headings (H1, H2), Hero Text, CTA Buttons",
+        "characteristics": "Condensed, Uppercase, Strong, Industrial",
+        "scale": "text-5xl md:text-7xl lg:text-9xl"
+      },
+      "body": {
+        "family": "DM Sans",
+        "fallback": "sans-serif",
+        "usage": "Paragraphs, UI Text, Navigation",
+        "characteristics": "Clean, Modern, Geometric, High Legibility"
+      },
+      "accent": {
+        "family": "Instrument Serif",
+        "fallback": "serif",
+        "style": "Italic",
+        "usage": "Testimonials, 'The Difference' highlights, Subtitles",
+        "characteristics": "Elegant, Human, Editorial, Warm"
+      }
+    },
+    "installation": "Import from Google Fonts: https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;500;700&family=Instrument+Serif:ital@1&display=swap"
+  },
+  "colors": {
+    "palette": {
+      "ocean": "#0A5E73",
+      "storm": "#0D3B4F",
+      "flame": "#E85D26",
+      "sun": "#F5A623",
+      "white": "#FFFFFF",
+      "cement": "#F0F0F0",
+      "warm_grey": "#E5E5E5"
+    },
+    "usage_ratios": {
+      "ocean_storm": "60% (Backgrounds, Hero, Footer, Primary Sections)",
+      "white_cement": "25% (Content Cards, Trust Section, Forms)",
+      "flame": "10% (Primary CTAs, Emergency Banner, Urgent Icons)",
+      "sun": "5% (Accents, Highlights, Trust Badges)"
+    },
+    "tailwind_config": {
+      "primary": "#0A5E73",
+      "secondary": "#0D3B4F",
+      "accent": "#E85D26",
+      "highlight": "#F5A623",
+      "background": "#F0F0F0",
+      "surface": "#FFFFFF"
+    },
+    "gradients": "NO PURPLE. Use subtle linear gradients between Ocean and Storm only for depth. e.g., bg-gradient-to-b from-storm to-ocean."
+  },
+  "visual_enhancers": {
+    "textures": [
+      {
+        "name": "Noise Overlay",
+        "css": "background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\"); pointer-events: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 50; mix-blend-mode: overlay;"
+      },
+      {
+        "name": "Industrial Stripes",
+        "css": "background-image: repeating-linear-gradient(45deg, #E85D26 0, #E85D26 10px, transparent 10px, transparent 20px); opacity: 0.1;"
+      }
+    ],
+    "motifs": [
+      "SVG Pipes: Use clean, geometric pipe lines as background dividers.",
+      "Water Ripples: CSS-only animation in the Hero section (blue circles expanding/fading).",
+      "Tropical Shadows: Use hard shadows (no blur) or deep diffuse shadows to simulate tropical sun."
+    ],
+    "shapes": "Rectangular, sharp edges for 'Industrial' feel. Minimal border-radius (max 4px or 0px)."
+  },
+  "layout_strategy": {
+    "type": "Single Page Landing (SPA)",
+    "container_style": "Max-width 1440px, centered.",
+    "spacing": "Generous. Use p-8 to p-24. Mobile needs p-4 min.",
+    "grid_system": "Bento Grid for Services. Asymmetric styling.",
+    "mobile_first": {
+      "sticky_bar": "Fixed bottom bar with 'Call Now' (Flame) and 'WhatsApp' (Green/Ocean) buttons.",
+      "navigation": "Hamburger menu with full-screen overlay."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-flame text-white font-bebas text-xl tracking-wide px-8 py-3 hover:bg-orange-600 sharp-corners shadow-[4px_4px_0px_0px_rgba(13,59,79,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all",
+      "secondary": "border-2 border-ocean text-ocean font-bebas text-xl px-8 py-3 hover:bg-ocean hover:text-white transition-colors",
+      "floating_cta": "Fixed bottom z-50 w-full flex"
+    },
+    "cards": {
+      "service_card": "bg-white border-l-4 border-flame p-6 shadow-lg hover:shadow-xl transition-shadow. No border-radius.",
+      "review_card": "bg-cement p-6 font-serif italic text-storm relative. Add quote icon."
+    },
+    "hero": {
+      "style": "Full viewport height (min-h-[90vh]). Background: Ocean/Storm gradient. Foreground: Animated CSS Water Ripples. Content: Center aligned, huge text.",
+      "animation": "CSS Ripple effect behind the main headline."
+    },
+    "emergency_banner": {
+      "style": "bg-flame text-white font-bebas text-2xl p-4 flex justify-between items-center. Use 'Industrial Stripes' texture overlay."
+    }
+  },
+  "sections_order": [
+    "Navigation (Sticky)",
+    "Hero (Problem/Solution + CTA)",
+    "Trust Bar (Logos/Stats)",
+    "Services Grid (Bento)",
+    "The RapidFix Difference (Split Layout)",
+    "Social Proof / Reviews",
+    "Emergency CTA Banner",
+    "About / Community",
+    "Footer (Contact + Links)"
+  ],
+  "assets": {
+    "svg_strategies": {
+      "pipes": "Use simple SVG paths (stroke-width: 2) to connect sections visually. Color: #0D3B4F with low opacity (0.2).",
+      "icons": "Use Lucide-React or Heroicons. Stroke width: 2px. Sharp edges preferred."
+    }
+  },
+  "instructions_to_main_agent": {
+    "1": "Install fonts via Google Fonts in index.css.",
+    "2": "Set up Tailwind colors in tailwind.config.js as per the palette.",
+    "3": "Create the 'Noise Overlay' as a global component in App.js.",
+    "4": "Build the 'Sticky Bottom CTA' component for mobile view (hidden on desktop).",
+    "5": "Implement the Hero with CSS-only water ripple animation (no images).",
+    "6": "Use 'Bebas Neue' for all Headings. 'DM Sans' for body. 'Instrument Serif' for quotes/accents.",
+    "7": "Ensure all text has high contrast. Ocean background needs White text.",
+    "8": "NO STOCK PHOTOS. Use the colors, typography, and CSS textures to carry the visual weight.",
+    "9": "Create a bilingual toggle state (simple boolean context) that switches text content."
+  },
+  "universal_guidelines": [
+    "You tend to converge toward generic outputs. Avoid this.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts. Use grids.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures separates good from extraordinary.",
+    "NEVER use AI assistant Emoji characters."
+  ]
+}
