@@ -193,7 +193,7 @@
 .hero-ripples {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
 }
 
@@ -222,11 +222,21 @@
   height: 100%;
 }
 
-.hero-content {
+/* Split hero layout */
+.hero-split {
   position: relative;
   z-index: 2;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-content {
   text-align: center;
-  max-width: 800px;
+  max-width: 700px;
 }
 
 .hero-overline {
@@ -240,7 +250,7 @@
 
 .hero-headline {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1;
   color: var(--rf-white);
   margin-bottom: 24px;
@@ -274,6 +284,39 @@
 .hero-ctas .btn-flame,
 .hero-ctas .btn-outline-white {
   justify-content: center;
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-frame {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border: 3px solid rgba(250, 250, 248, 0.1);
+}
+
+.hero-image-accent {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: -12px;
+  bottom: -12px;
+  border: 2px solid var(--rf-flame);
+  z-index: 0;
+  opacity: 0.4;
 }
 
 /* --- BUTTONS --- */
@@ -370,11 +413,11 @@
 /* --- BADGE 45 --- */
 .badge-45 {
   position: absolute;
-  right: 6%;
-  top: calc(var(--nav-height) + 16px);
+  right: -16px;
+  top: -16px;
   background: var(--rf-sun);
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -382,6 +425,7 @@
   justify-content: center;
   z-index: 3;
   animation: pulseBadge 3s ease-in-out infinite;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
 .badge-num {
@@ -976,7 +1020,7 @@
   }
 
   .hero-headline {
-    font-size: 80px;
+    font-size: 72px;
   }
 
   .hero-overline {
@@ -998,11 +1042,39 @@
     width: auto;
   }
 
+  .hero-split {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hero-content {
+    text-align: left;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .hero-content .hero-sub {
+    margin-left: 0;
+  }
+
+  .hero-ctas {
+    justify-content: flex-start;
+  }
+
+  .hero-image-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .hero-image-frame {
+    max-width: 380px;
+  }
+
   .badge-45 {
-    width: 100px;
-    height: 100px;
-    right: 10%;
-    top: 22%;
+    width: 90px;
+    height: 90px;
+    right: -20px;
+    top: -20px;
   }
 
   .badge-num {
@@ -1102,7 +1174,7 @@
    =========================== */
 @media (min-width: 1200px) {
   .hero-headline {
-    font-size: 110px;
+    font-size: 96px;
   }
 
   .hero-sub {
@@ -1114,19 +1186,23 @@
     letter-spacing: 5px;
   }
 
+  .hero-image-frame {
+    max-width: 440px;
+  }
+
   .badge-45 {
-    width: 120px;
-    height: 120px;
-    right: 12%;
-    top: 20%;
+    width: 110px;
+    height: 110px;
+    right: -24px;
+    top: -24px;
   }
 
   .badge-num {
-    font-size: 52px;
+    font-size: 48px;
   }
 
   .badge-unit {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .section-headline {

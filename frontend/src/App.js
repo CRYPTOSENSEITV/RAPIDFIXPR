@@ -10,6 +10,7 @@ import {
 const PHONE = '787-608-4375';
 const PHONE_LINK = 'tel:7876084375';
 const WHATSAPP_LINK = 'https://wa.me/17876084375';
+const HERO_IMAGE = 'https://customer-assets.emergentagent.com/job_island-fast-plumbing/artifacts/305srpc6_WhatsApp%20Image%202026-03-17%20at%201.16.33%20PM.jpeg';
 
 const services = [
   {
@@ -177,30 +178,43 @@ function App() {
             </svg>
           </div>
 
-          <div className="hero-content">
-            <p className="hero-overline stagger-1" data-testid="hero-overline">
-              PLOMERÍA PROFESIONAL — PUERTO RICO
-            </p>
-            <h1 className="hero-headline stagger-2" data-testid="hero-headline">
-              WHEN THE WATER RISES,<br />
-              <em>we show up.</em>
-            </h1>
-            <p className="hero-sub stagger-3" data-testid="hero-subcopy">
-              Puerto Rico's fastest plumbing response. 45 minutes or less, 24/7, because your home can't wait until mañana.
-            </p>
-            <div className="hero-ctas stagger-4">
-              <a href={PHONE_LINK} className="btn-flame" data-testid="hero-cta-call">
-                <Phone size={18} /> Llama Ahora — {PHONE}
-              </a>
-              <a href={WHATSAPP_LINK} className="btn-outline-white" data-testid="hero-cta-whatsapp">
-                <MessageCircle size={18} /> WhatsApp
-              </a>
+          <div className="hero-split">
+            <div className="hero-content">
+              <p className="hero-overline stagger-1" data-testid="hero-overline">
+                PLOMERÍA PROFESIONAL — PUERTO RICO
+              </p>
+              <h1 className="hero-headline stagger-2" data-testid="hero-headline">
+                WHEN THE WATER RISES,<br />
+                <em>we show up.</em>
+              </h1>
+              <p className="hero-sub stagger-3" data-testid="hero-subcopy">
+                Puerto Rico's fastest plumbing response. 45 minutes or less, 24/7, because your home can't wait until mañana.
+              </p>
+              <div className="hero-ctas stagger-4">
+                <a href={PHONE_LINK} className="btn-flame" data-testid="hero-cta-call">
+                  <Phone size={18} /> Llama Ahora — {PHONE}
+                </a>
+                <a href={WHATSAPP_LINK} className="btn-outline-white" data-testid="hero-cta-whatsapp">
+                  <MessageCircle size={18} /> WhatsApp
+                </a>
+              </div>
             </div>
-          </div>
 
-          <div className="badge-45 stagger-5" data-testid="badge-45">
-            <span className="badge-num">45</span>
-            <span className="badge-unit">MIN</span>
+            <div className="hero-image-wrapper stagger-5" data-testid="hero-image-wrapper">
+              <div className="hero-image-frame">
+                <img
+                  src={HERO_IMAGE}
+                  alt="RapidFix professional plumber ready to serve Puerto Rico"
+                  className="hero-image"
+                  data-testid="hero-image"
+                />
+                <div className="hero-image-accent" aria-hidden="true"></div>
+              </div>
+              <div className="badge-45" data-testid="badge-45">
+                <span className="badge-num">45</span>
+                <span className="badge-unit">MIN</span>
+              </div>
+            </div>
           </div>
         </section>
 
