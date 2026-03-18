@@ -238,6 +238,14 @@ function App() {
 
         {/* === SERVICES === */}
         <section id="servicios" className="services-section" data-testid="services-section">
+          <div className="services-hero-img" data-testid="services-hero-image">
+            <img
+              src="/images/services-tools.jpg"
+              alt="Herramientas profesionales de plomería sobre superficie de concreto"
+              className="services-banner-photo"
+            />
+            <div className="services-hero-overlay"></div>
+          </div>
           <div className="section-container">
             <p className="section-overline reveal">NUESTROS SERVICIOS</p>
             <h2 className="section-headline reveal">
@@ -264,10 +272,18 @@ function App() {
         <section id="diferencia" className="difference-section" data-testid="difference-section">
           <div className="section-container">
             <div className="diff-grid reveal">
-              <div className="diff-stat" data-testid="diff-stat">
-                <span className="diff-number">45</span>
-                <span className="diff-label">MINUTOS</span>
-                <span className="diff-sublabel">O MENOS — GARANTIZADO</span>
+              <div className="diff-visual" data-testid="diff-visual">
+                <div className="diff-stat" data-testid="diff-stat">
+                  <span className="diff-number">45</span>
+                  <span className="diff-label">MINUTOS</span>
+                  <span className="diff-sublabel">O MENOS — GARANTIZADO</span>
+                </div>
+                <img
+                  src="/images/service-action.jpg"
+                  alt="Plomero reparando tuberías de cobre en un hogar de Puerto Rico"
+                  className="diff-photo"
+                  data-testid="diff-photo"
+                />
               </div>
               <div className="diff-copy">
                 <p className="section-overline">LA DIFERENCIA RAPIDFIX</p>
@@ -328,7 +344,7 @@ function App() {
             <div className="about-grid reveal">
               <div className="about-image" data-testid="about-image">
                 <img
-                  src="/images/about-team.png"
+                  src="/images/about-team.jpg"
                   alt="Equipo RapidFix frente a su vehículo de servicio en un barrio de Puerto Rico"
                   className="about-photo"
                   data-testid="about-photo"
