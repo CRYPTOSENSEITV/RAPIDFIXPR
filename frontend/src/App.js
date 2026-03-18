@@ -327,9 +327,12 @@ function App() {
           <div className="section-container">
             <div className="about-grid reveal">
               <div className="about-image" data-testid="about-image">
-                <div className="about-placeholder">
-                  [Photo: RapidFix technician team in front of branded van, PR concrete neighborhood background]
-                </div>
+                <img
+                  src="/images/about-team.png"
+                  alt="Equipo RapidFix frente a su vehículo de servicio en un barrio de Puerto Rico"
+                  className="about-photo"
+                  data-testid="about-photo"
+                />
               </div>
               <div className="about-copy">
                 <p className="section-overline">NUESTRA HISTORIA</p>
