@@ -7,8 +7,8 @@ import {
   Menu, X, Thermometer, Globe
 } from 'lucide-react';
 
-const PHONE = '787-608-4375';
-const PHONE_LINK = 'tel:7876084375';
+const PHONE = '939-268-8367';
+const PHONE_LINK = 'tel:9392688367';
 const WHATSAPP_LINK = 'https://wa.me/19392688367';
 const HERO_IMAGE = 'https://customer-assets.emergentagent.com/job_island-fast-plumbing/artifacts/305srpc6_WhatsApp%20Image%202026-03-17%20at%201.16.33%20PM.jpeg';
 
@@ -501,7 +501,7 @@ function App() {
             <h4>{T.footer.contact}</h4>
             <a href={PHONE_LINK}><Phone size={14} /> {PHONE}</a>
             <a href={WHATSAPP_LINK}><MessageCircle size={14} /> WhatsApp</a>
-            <a href="mailto:info@rapidfixpr.com"><MapPin size={14} /> info@rapidfixpr.com</a>
+            <a href="mailto:rapidfixpr@icloud.com"><MapPin size={14} /> rapidfixpr@icloud.com</a>
           </div>
 
           <div className="footer-areas" data-testid="footer-areas">

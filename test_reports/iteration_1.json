@@ -17,12 +17,12 @@
     "Mobile sticky CTA bar appears on scroll",
     "Scroll animations: IntersectionObserver working, sections fade in",
     "Navigation smooth scroll to sections working",
-    "All 7 phone links point to tel:7876084375",
-    "All 5 WhatsApp links point to https://wa.me/17876084375",
+    "All 7 phone links point to tel:9392688367",
+    "All 5 WhatsApp links point to https://wa.me/19392688367",
     "Nav becomes opaque on scroll (scrolled class added)",
     "Desktop viewport (1920px) displays correctly",
     "Mobile viewport (390px) displays correctly",
-    "Phone number 787-608-4375 displayed correctly throughout page"
+    "Phone number 939-268-8367 displayed correctly throughout page"
   ],
   "test_report_links": [],
   "action_item_for_main_agent": "",

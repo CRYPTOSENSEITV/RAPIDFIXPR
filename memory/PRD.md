@@ -25,7 +25,7 @@ Build a production-ready landing page for RapidFix, a professional plumbing comp
 - Sticky mobile CTA bar (phone + WhatsApp)
 - Smooth scroll navigation
 - Staggered hero entrance animations
-- Phone: 787-608-4375, WhatsApp: placeholder
+- Phone: 939-268-8367, WhatsApp: wa.me/19392688367, Email: rapidfixpr@icloud.com
 
 ## Backlog
 - **P0**: None

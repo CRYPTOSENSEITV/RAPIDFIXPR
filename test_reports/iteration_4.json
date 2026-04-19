@@ -11,7 +11,7 @@
     "Language toggle switches to English correctly (hero shows 'WHEN THE WATER RISES, we show up.', nav shows 'Services, About Us, Reviews, Contact')",
     "Language toggle switches back to Spanish correctly",
     "All 5 WhatsApp links point to https://wa.me/19392688367 (hero, emergency, footer, mobile sticky)",
-    "All 7 phone links correctly point to tel:7876084375",
+    "All 7 phone links correctly point to tel:9392688367",
     "Trust bar text changes correctly: ES '24/7 Servicio' vs EN '24/7 Service'",
     "Services section translations: ES 'NUESTROS SERVICIOS/EXPERIENCIA Isleña' vs EN 'OUR SERVICES/ISLAND-TOUGH Expertise'",
     "All 6 service card names translate correctly (e.g., 'Emergencias 24/7' vs '24/7 Emergencies')",
