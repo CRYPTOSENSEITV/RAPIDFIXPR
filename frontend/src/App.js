@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import {
   Phone, MessageCircle, Clock, Shield, Zap, DollarSign,
@@ -158,8 +158,49 @@ function App() {
   const [scrolled, setScrolled] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(false);
   const [lang, setLang] = useState('es');
+  const heroVideoRef = useRef(null);
+  const reviewsVideoRef = useRef(null);
 
   const T = txt[lang];
+
+  useEffect(() => {
+    const videos = [heroVideoRef.current, reviewsVideoRef.current].filter(Boolean);
+    videos.forEach((v) => {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+      const tryPlay = () => v.play().catch(() => {});
+      tryPlay();
+      v.addEventListener('loadedmetadata', tryPlay);
+      v.addEventListener('canplay', tryPlay);
+    });
+
+    const visibilityObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const v = e.target;
+          if (e.isIntersecting) v.play().catch(() => {});
+          else if (!v.paused) v.pause();
+        });
+      },
+      { threshold: 0.1 }
+    );
+    videos.forEach((v) => visibilityObserver.observe(v));
+
+    const resumeOnInteraction = () => {
+      videos.forEach((v) => v.play().catch(() => {}));
+    };
+    document.addEventListener('touchstart', resumeOnInteraction, { once: true, passive: true });
+    document.addEventListener('click', resumeOnInteraction, { once: true });
+
+    return () => {
+      visibilityObserver.disconnect();
+      document.removeEventListener('touchstart', resumeOnInteraction);
+      document.removeEventListener('click', resumeOnInteraction);
+    };
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -267,6 +308,7 @@ function App() {
         <section id="hero" className="hero-section" data-testid="hero-section">
           <div className="hero-bg" aria-hidden="true">
             <video
+              ref={heroVideoRef}
               className="hero-video"
               src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
               autoPlay
@@ -274,6 +316,8 @@ function App() {
               loop
               playsInline
               preload="auto"
+              disablePictureInPicture
+              disableRemotePlayback
             />
             <div className="hero-ripples">
               <span className="ripple r1"></span>
@@ -419,6 +463,7 @@ function App() {
         {/* === REVIEWS === */}
         <section id="resenas" className="reviews-section" data-testid="reviews-section">
           <video
+            ref={reviewsVideoRef}
             className="reviews-video"
             src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
             autoPlay
@@ -426,6 +471,8 @@ function App() {
             loop
             playsInline
             preload="auto"
+            disablePictureInPicture
+            disableRemotePlayback
             aria-hidden="true"
           />
           <div className="section-container">
