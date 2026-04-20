@@ -266,6 +266,15 @@ function App() {
         {/* === HERO === */}
         <section id="hero" className="hero-section" data-testid="hero-section">
           <div className="hero-bg" aria-hidden="true">
+            <video
+              className="hero-video"
+              src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+            />
             <div className="hero-ripples">
               <span className="ripple r1"></span>
               <span className="ripple r2"></span>
