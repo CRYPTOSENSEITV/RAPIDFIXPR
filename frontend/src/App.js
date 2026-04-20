@@ -418,6 +418,16 @@ function App() {
 
         {/* === REVIEWS === */}
         <section id="resenas" className="reviews-section" data-testid="reviews-section">
+          <video
+            className="reviews-video"
+            src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            aria-hidden="true"
+          />
           <div className="section-container">
             <p className="section-overline reveal">{T.reviews.overline}</p>
             <h2 className="section-headline reveal" style={{ color: 'var(--rf-white)' }}>
